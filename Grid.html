@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            height: 100px;
+            background: lightcoral;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .header .x {
+            border: 2px solid;
+        }
+        
+        .nav {
+            height: 50px;
+            background: red;
+        }
+        
+        .content {
+            height: 350px;
+            background: green;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        
+        .content .z {
+            border: 2px solid;
+            display: grid;
+            /* grid-template-columns: 1fr; */
+            /* grid-template-rows: 50px 50px 50px 100px; */
+        }
+        
+        .content .z .m1 {
+            border: 2px solid;
+        }
+        
+        .content .z .parth {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            border: 2px solid;
+        }
+        
+        .content .z .parth .v1 {
+            border: 2px solid;
+        }
+        
+        .footer {
+            height: 140px;
+            background: blue;
+        }
+        
+        @media(max-width:500px) {
+            .header {
+                grid-template-columns: 1fr;
+            }
+            .content {
+                grid-template-columns: 1fr 1fr;
+            }
+            .content .z .parth {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="x">Logo</div>
+        <div class="x">Company Name</div>
+    </div>
+
+
+    <div class="nav">Nav</div>
+
+
+    <div class="content">
+
+        <div class="z">z1</div>
+
+        <div class="z">
+            <div class="m1 parth">
+                <div class="v1">v1</div>
+                <div class="v1">v2</div>
+                <div class="v1">v3</div>
+            </div>
+
+            <div class="m1">m2</div>
+        </div>
+
+        <div class="z">z3</div>
+
+        <div class="z">z4</div>
+    </div>
+
+
+    <div class="footer">footer</div>
+</body>
+
+</html>
